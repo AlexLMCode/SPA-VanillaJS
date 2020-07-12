@@ -1,15 +1,22 @@
-const Home = () => {
+import getData from "../utils/getData";
+
+const Home = async () => {
+
+    const characters = await getData();
+
     const view = `
     <div class="characters">
+        ${characters.results.map(character => `
         <article class="character-item">
-            <a href="#/1/">
-                <img src="image" alt="name">
-                <h2>Name</h2>
+            <a href="#/${character.id}/">
+              <img src="${character.image}" alt="${character.name}">
+              <h2>${character.name}</h2>
             </a>
-        </article>     
+        </article>
+      `).join('')}
     </div>
-   `;
+  `;
     return view;
-}
-
+};
+//map me retorna un nuevo arreglo con una estructura especifica.
 export default Home;
