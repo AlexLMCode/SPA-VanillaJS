@@ -1,0 +1,56 @@
+@import "breakpoints";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+}
+
+.container {
+  max-width: 330px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  background-color: lightblue;
+  margin-bottom: 3rem;
+
+  .header__container {
+    display: flex;
+    width: 330px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    h1 a {
+      color: black;
+    }
+  }
+
+  &__nav{
+    a {
+      color: black;
+    }
+  }
+}
+
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.characters__container {
+  display: grid;
+  justify-content: center;
+}
